@@ -19,3 +19,11 @@
   * android:thumb -> tint colorAccent -> 5.0
   * android:indeterminateDrawable -> tint colorAccent -> 5.0
   * android:progressDrawable -> tint colorAccent -> 5.0
+* EditText
+  * android:background
+  * android:textColor -> android:textColorPrimary
+  * android:textColorHint -> android:textColorHint
+  * android:drawableLeft -> @null
+  * android:drawableTop -> @null
+  * android:drawableRight -> @null
+  * android:drawableBottom -> @null
