@@ -2,7 +2,7 @@ package skin.support.flycotablayout.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 import android.util.AttributeSet;
 
 import com.flyco.tablayout.SegmentTabLayout;
@@ -65,22 +65,22 @@ public class SkinSegmentTabLayout extends SegmentTabLayout implements SkinCompat
 
     private void applySegmentTabLayoutResources() {
         if (mIndicatorColorResId != INVALID_ID) {
-            setIndicatorColor(SkinCompatResources.getInstance().getColor(mIndicatorColorResId));
+            setIndicatorColor(SkinCompatResources.getColor(getContext(), mIndicatorColorResId));
         }
         if (mDividerColorResId != INVALID_ID) {
-            setDividerColor(SkinCompatResources.getInstance().getColor(mDividerColorResId));
+            setDividerColor(SkinCompatResources.getColor(getContext(), mDividerColorResId));
         }
         if (mTextSelectColorResId != INVALID_ID) {
-            setTextSelectColor(SkinCompatResources.getInstance().getColor(mTextSelectColorResId));
+            setTextSelectColor(SkinCompatResources.getColor(getContext(), mTextSelectColorResId));
         }
         if (mTextUnselectColorResId != INVALID_ID) {
-            setTextUnselectColor(SkinCompatResources.getInstance().getColor(mTextUnselectColorResId));
+            setTextUnselectColor(SkinCompatResources.getColor(getContext(), mTextUnselectColorResId));
         }
         if (mBarColorResId != INVALID_ID) {
-            setBarColor(SkinCompatResources.getInstance().getColor(mBarColorResId));
+            setBarColor(SkinCompatResources.getColor(getContext(), mBarColorResId));
         }
         if (mBarStrokeColorResId != INVALID_ID) {
-            setBarStrokeColor(SkinCompatResources.getInstance().getColor(mBarStrokeColorResId));
+            setBarStrokeColor(SkinCompatResources.getColor(getContext(), mBarStrokeColorResId));
         }
     }
 

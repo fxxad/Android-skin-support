@@ -2,7 +2,7 @@ package skin.support.flycotablayout.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 import android.util.AttributeSet;
 
 import com.flyco.tablayout.widget.MsgView;
@@ -75,7 +75,7 @@ public class SkinMsgView extends MsgView implements SkinCompatSupportable {
     private void applyBackgroundColorResource() {
         mBackgroundColorResId = SkinCompatHelper.checkResourceId(mBackgroundColorResId);
         if (mBackgroundColorResId != INVALID_ID) {
-            setBackgroundColor(SkinCompatResources.getInstance().getColor(mBackgroundColorResId));
+            setBackgroundColor(SkinCompatResources.getColor(getContext(), mBackgroundColorResId));
         }
     }
 
@@ -87,7 +87,7 @@ public class SkinMsgView extends MsgView implements SkinCompatSupportable {
     private void applyStrokeColorResource() {
         mStrokeColorResId = SkinCompatHelper.checkResourceId(mStrokeColorResId);
         if (mStrokeColorResId != INVALID_ID) {
-            setStrokeColor(SkinCompatResources.getInstance().getColor(mStrokeColorResId));
+            setStrokeColor(SkinCompatResources.getColor(getContext(), mStrokeColorResId));
         }
     }
 

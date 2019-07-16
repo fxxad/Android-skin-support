@@ -2,8 +2,6 @@ package skin.support.circleimageview.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -49,7 +47,7 @@ public class SkinCompatCircleImageView extends CircleImageView implements SkinCo
     private void applyFillColorResource() {
         mFillColorResId = SkinCompatHelper.checkResourceId(mFillColorResId);
         if (mFillColorResId != INVALID_ID) {
-            int color = SkinCompatResources.getInstance().getColor(mFillColorResId);
+            int color = SkinCompatResources.getColor(getContext(), mFillColorResId);
             setFillColor(color);
         }
     }
@@ -57,28 +55,28 @@ public class SkinCompatCircleImageView extends CircleImageView implements SkinCo
     private void applyBorderColorResource() {
         mBorderColorResId = SkinCompatHelper.checkResourceId(mBorderColorResId);
         if (mBorderColorResId != INVALID_ID) {
-            int color = SkinCompatResources.getInstance().getColor(mBorderColorResId);
+            int color = SkinCompatResources.getColor(getContext(), mBorderColorResId);
             setBorderColor(color);
         }
     }
 
     @Override
-    public void setImageResource(@DrawableRes int resId) {
+    public void setImageResource(int resId) {
         super.setImageResource(resId);
         if (mImageHelper != null) {
-            mImageHelper.applySkin();
+            mImageHelper.setImageResource(resId);
         }
     }
 
     @Override
-    public void setBorderColorResource(@ColorRes int borderColorRes) {
+    public void setBorderColorResource(int borderColorRes) {
         super.setBorderColorResource(borderColorRes);
         mBorderColorResId = borderColorRes;
         applySkin();
     }
 
     @Override
-    public void setFillColorResource(@ColorRes int fillColorRes) {
+    public void setFillColorResource(int fillColorRes) {
         super.setFillColorResource(fillColorRes);
         mFillColorResId = fillColorRes;
         applySkin();

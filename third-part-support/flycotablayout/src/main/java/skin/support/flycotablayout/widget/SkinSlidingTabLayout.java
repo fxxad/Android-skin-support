@@ -2,7 +2,7 @@ package skin.support.flycotablayout.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 import android.util.AttributeSet;
 
 import com.flyco.tablayout.SlidingTabLayout;
@@ -67,21 +67,20 @@ public class SkinSlidingTabLayout extends SlidingTabLayout implements SkinCompat
     }
 
     private void applySlidingTabLayoutResources() {
-        SkinCompatResources resources = SkinCompatResources.getInstance();
         if (mIndicatorColorResId != INVALID_ID) {
-            setIndicatorColor(resources.getColor(mIndicatorColorResId));
+            setIndicatorColor(SkinCompatResources.getColor(getContext(), mIndicatorColorResId));
         }
         if (mUnderlineColorResId != INVALID_ID) {
-            setUnderlineColor(resources.getColor(mUnderlineColorResId));
+            setUnderlineColor(SkinCompatResources.getColor(getContext(), mUnderlineColorResId));
         }
         if (mDividerColorResId != INVALID_ID) {
-            setDividerColor(resources.getColor(mDividerColorResId));
+            setDividerColor(SkinCompatResources.getColor(getContext(), mDividerColorResId));
         }
         if (mTextSelectColorResId != INVALID_ID) {
-            setTextSelectColor(resources.getColor(mTextSelectColorResId));
+            setTextSelectColor(SkinCompatResources.getColor(getContext(), mTextSelectColorResId));
         }
         if (mTextUnselectColorResId != INVALID_ID) {
-            setTextUnselectColor(resources.getColor(mTextUnselectColorResId));
+            setTextUnselectColor(SkinCompatResources.getColor(getContext(), mTextUnselectColorResId));
         }
     }
 
